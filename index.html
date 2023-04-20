@@ -22,6 +22,7 @@ if (navigator.userAgent.match(/Android/i)) {
   const a = document.createElement("a");
   a.href = "intent://arvr.google.com/scene-viewer/1.0?file=https://theodoruia.github.io/kb_3d/lys_og_fat.usdz&mode=ar_only#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;";
   a.innerHTML = "<img src='thumbnail.png'>Lys og fat for Android";
+  a.innerHTML = navigator.userAgent;
 }
 else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
   
@@ -30,6 +31,7 @@ else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
   a.rel = "ar";
   a.href = "lys_og_fat.usdz";
   a.innerHTML = "<img src='thumbnail.png'>Lys og fat for iOS";
+  a.innerHTML = navigator.userAgent;
 
 }
 else {
@@ -37,6 +39,7 @@ else {
   //add text to div
   const link = document.getElementById("link");
   link.innerHTML = "AR is not supported on this device";
+  a.innerHTML = navigator.userAgent;
 }
 </script>
 
