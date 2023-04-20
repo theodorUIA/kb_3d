@@ -6,6 +6,10 @@
 <title>KB 3D</title>
 </head>
 <body>
+
+  <div id="link">
+
+  </div>
 <div>
   <a rel="ar" href="lys_og_fat.usdz">
       <img src="thumbnail.png">
@@ -20,16 +24,30 @@
 
 <a href="intent://arvr.google.com/scene-viewer/1.0?file=https://theodoruia.github.io/kb_3d/lys_og_fat.usdz&mode=ar_only#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;">Lys og fat for Android USDZ</a>;
 
-<a href="intent://arvr.google.com/scene-viewer/1.0?file=https://theodoruia.github.io/kb_3d/lys_og_fat.glb&mode=ar_only#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;">Lys og fat for Android GLB</a>;
-
 </body>
 <script>
-const a = document.createElement("a");
-if (a.relList.supports("ar")) {
-  //AR supported
+//detect ios or android
+if (navigator.userAgent.match(/Android/i)) {
+  //Android
+  const link = document.getElementById("link");
+  const a = document.createElement("a");
+  a.href = "intent://arvr.google.com/scene-viewer/1.0?file=https://theodoruia.github.io/kb_3d/lys_og_fat.usdz&mode=ar_only#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;";
+  a.innerHTML = "<img src='thumbnail.png'>Lys og fat for Android";
+}
+else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+  
+  const link = document.getElementById("link");
+  const a = document.createElement("a");
+  a.rel = "ar";
+  a.href = "lys_og_fat.usdz";
+  a.innerHTML = "<img src='thumbnail.png'>Lys og fat for iOS";
+
 }
 else {
-  
+  //Other
+  //add text to div
+  const link = document.getElementById("link");
+  link.innerHTML = "AR is not supported on this device";
 }
 </script>
 
