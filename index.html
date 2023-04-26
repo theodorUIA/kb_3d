@@ -32,6 +32,7 @@
   .product-card img {
     max-width: 100%;
     height: auto;
+    align-self: center;
   }
 
   .platform-icons {
@@ -48,11 +49,20 @@
   }
 
   .ios {
-    display: none;
   }
 
   .android {
-    display: none;
+  }
+
+  .product-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  .product-description {
+    font-size: 16px;
+    margin-bottom: 10px;
   }
 </style>
 <script>
@@ -78,28 +88,46 @@
 
 <div class="container">
   <div class="product-card">
-    <img src="lys_og_fat_thumbnail.png" alt="Lys og Fat" />
+    <img src="thumbnail_lys_og_fat.png" alt="Lys og Fat" />
+    <h2 class="product-name">Fat med tilhørende lysholdere</h2>
+    <p class="product-description">Et vakkert og funksjonelt midtpunkt for spisebordet ditt, denne tallerkenen har lysestaker og små skåler for servering av snacks og tilbehør.</p>
     <div class="platform-icons">
-      <a class="ios" rel="ar" href="lys_og_fat_ios.usdz">
+      <a class="ios" rel="ar" href="3dmodels/lys_og_fat_ios.usdz">
         <img src="iOS.png" alt="iOS AR" width="75px">
       </a>
-      <a class="android" href="intent://arvr.google.com/scene-viewer/1.0?file=https://theodoruia.github.io/kb_3d/lys_og_fat_android.glb&mode=ar_only#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;">
+      <a class="android" href="intent://arvr.google.com/scene-viewer/1.0?file=https://theodoruia.github.io/kb_3d/3dmodels/lys_og_fat_android.glb&mode=ar_only#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;">
         <img src='android.png' alt="Android AR" width="75px" />
-      </a>
-    </div>
-  </div>
+        </a>
+        </div>
+          </div>
+          <div class="product-card">
+            <img src="thumbnail_bord.png" alt="Bord" />
+            <h2 class="product-name">Regnbue benk</h2>
+            <p class="product-description">Tilføy et fargeklatt til uterommet ditt med dette morsomme og livlige bordet og benkesettet med regnbuefarger. Perfekt for utendørs sammenkomster, piknik og avslapping med stil.</p>
+            <div class="platform-icons">
+              <a class="ios" rel="ar" href="3dmodels/bord_ios.usdz">
+                <img src="iOS.png" alt="iOS AR" width="75px">
+              </a>
+              <a class="android" href="intent://arvr.google.com/scene-viewer/1.0?file=https://theodoruia.github.io/kb_3d/3dmodels/bord_android.glb&mode=ar_only#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;">
+                <img src='android.png' alt="Android AR" width="75px" />
+              </a>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="thumbnail_chair.png" alt="Chair" />
+            <h2 class="product-name">Hagestol</h2>
+            <p class="product-description">Tilføy et fargeklatt til uterommet ditt med dette morsomme og livlige bordet og benkesettet med regnbuefarger. Perfekt for utendørs sammenkomster, piknik og avslapping med stil.</p>
+            <div class="platform-icons">
+              <a class="ios" rel="ar" href="3dmodels/chair_ios.usdz">
+                <img src="iOS.png" alt="iOS AR" width="75px">
+              </a>
+              <a class="android" href="intent://arvr.google.com/scene-viewer/1.0?file=https://theodoruia.github.io/kb_3d/3dmodels/chair_android.glb&mode=ar_only#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;">
+                <img src='android.png' alt="Android AR" width="75px" />
+              </a>
+            </div>
+          </div>
 
-  <div class="product-card">
-    <img src="bord_thumbnail.png" alt="Bord" />
-    <div class="platform-icons">
-      <a class="ios" rel="ar" href="bord_ios.usdz">
-        <img src="iOS.png" alt="iOS AR" width="75px">
-      </a>
-      <a class="android" href="intent://arvr.google.com/scene-viewer/1.0?file=https://theodoruia.github.io/kb_3d/bord_android.glb&mode=ar_only#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;">
-        <img src='android.png' alt="Android AR" width="75px" />
-      </a>
-    </div>
-  </div>
-</div>
-</body>
-</html>    
+
+        </div>
+        </body>
+        </html>
