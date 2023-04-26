@@ -7,7 +7,7 @@
 <style>
   body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #f6d365, #fda085);
+    background-color: #f3f3f3;
     margin: 0;
     padding: 0;
   }
@@ -40,7 +40,39 @@
     gap: 10px;
     margin-top: 10px;
   }
+
+  @media screen and (max-width: 767px) {
+    .product-card {
+      width: calc(100% - 40px);
+    }
+  }
+
+  .ios {
+    display: none;
+  }
+
+  .android {
+    display: none;
+  }
 </style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var isAndroid = /(android)/i.test(navigator.userAgent);
+    var isIOS = /iPad|iPhone|iPod/.test(navigator.platform) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+    if (isAndroid) {
+      var androidIcons = document.getElementsByClassName("android");
+      for (var i = 0; i < androidIcons.length; i++) {
+        androidIcons[i].style.display = "block";
+      }
+    } else if (isIOS) {
+      var iosIcons = document.getElementsByClassName("ios");
+      for (var i = 0; i < iosIcons.length; i++) {
+        iosIcons[i].style.display = "block";
+      }
+    }
+  });
+</script>
 </head>
 <body>
 
@@ -48,10 +80,10 @@
   <div class="product-card">
     <img src="lys_og_fat_thumbnail.png" alt="Lys og Fat" />
     <div class="platform-icons">
-      <a rel="ar" href="lys_og_fat_ios.usdz">
+      <a class="ios" rel="ar" href="lys_og_fat_ios.usdz">
         <img src="iOS.png" alt="iOS AR" width="75px">
       </a>
-      <a href="intent://arvr.google.com/scene-viewer/1.0?file=https://theodoruia.github.io/kb_3d/lys_og_fat_android.glb&mode=ar_only#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;">
+      <a class="android" href="intent://arvr.google.com/scene-viewer/1.0?file=https://theodoruia.github.io/kb_3d/lys_og_fat_android.glb&mode=ar_only#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;">
         <img src='android.png' alt="Android AR" width="75px" />
       </a>
     </div>
@@ -60,15 +92,14 @@
   <div class="product-card">
     <img src="bord_thumbnail.png" alt="Bord" />
     <div class="platform-icons">
-      <a rel="ar" href="bord_ios.usdz">
+      <a class="ios" rel="ar" href="bord_ios.usdz">
         <img src="iOS.png" alt="iOS AR" width="75px">
       </a>
-      <a href="intent://arvr.google.com/scene-viewer/1.0?file=https://theodoruia.github.io/kb_3d/bord_android.glb&mode=ar_only#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;">
+      <a class="android" href="intent://arvr.google.com/scene-viewer/1.0?file=https://theodoruia.github.io/kb_3d/bord_android.glb&mode=ar_only#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;">
         <img src='android.png' alt="Android AR" width="75px" />
       </a>
     </div>
   </div>
 </div>
-
 </body>
-</html>
+</html>    
